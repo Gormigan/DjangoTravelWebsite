@@ -1,23 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="041c806f-fcd1-4337-b5e4-782d02748f38" name="Default Changelist" comment="" />
+    <list default="true" id="041c806f-fcd1-4337-b5e4-782d02748f38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/media/travel/2d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/travel/9c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/travel/cairo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/travel/django-logo-negative.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/travel/fortress-wall-old-town-tower-night-tallinn_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoTravelWebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoTravelWebsite.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoTravelWebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoTravelWebsite/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1rF1dPLdRx5P4PmF5cC5QsyRxvq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="041c806f-fcd1-4337-b5e4-782d02748f38" name="Default Changelist" comment="" />
+      <created>1618557112771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618557112771</updated>
+      <workItem from="1618557119521" duration="7170000" />
+    </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="419" y="247" key="FileChooserDialogImpl" timestamp="1618558374489">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="419" y="247" key="FileChooserDialogImpl/0.0.1280.984/1280.0.1280.984@0.0.1280.984" timestamp="1618558374489" />
+    <state x="810" y="418" key="Github.ShareDialog" timestamp="1618549167969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="810" y="418" key="Github.ShareDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618549167969" />
+    <state x="734" y="221" key="Github.UntrackedFilesDialog" timestamp="1618549171097">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="221" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618549171097" />
+    <state x="141" y="137" key="SettingsEditor" timestamp="1618558384495">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="141" y="137" key="SettingsEditor/0.0.1280.984/1280.0.1280.984@0.0.1280.984" timestamp="1618558384495" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1618549074294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1618549074294" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1618548562032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
