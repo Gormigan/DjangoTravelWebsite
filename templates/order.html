@@ -1,0 +1,141 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Book{% endblock %}
+{% block css %}
+
+<link href="../static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="../static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="../static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="../static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+<link href="../static/css/main.css" rel="stylesheet" media="all">
+{% endblock %}
+{% block bootstrap %}{% endblock %}
+{% block content %}
+
+    <div class="page-wrapper bg-img-1 p-t-165 p-b-100">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-body">
+                    <ul class="tab-list">
+                        <li class="tab-list__item active">
+                            <a class="tab-list__link" href="#tab1" data-toggle="tab">Travel</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="tab1"></div>
+                        <div class="tab-pane" id="tab2">
+                        </div>
+                        <div class="tab-pane active" id="tab3">
+                            <form method="post" action="#">
+                                {% csrf_token %}
+                                <div class="row row-space"style="margin-bottom: 20px">
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Name:</label>
+                                            <p class="input--style-1">{{ data.name }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Price:</label>
+                                            <p class="input--style-1" id="trip-price">$</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space"style="margin-bottom: 20px">
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">From:</label>
+                                            <p class="input--style-1">{{ data.city_from }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">To:</label>
+                                            <p class="input--style-1">{{ data.city_to }}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row row-space"style="margin-bottom: 20px">
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Departure:</label>
+                                            <p class="input--style-1">{{ data.departure_date }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Return:</label>
+                                            <p class="input--style-1">{{ data.return_date }}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space "style="margin-bottom: 20px">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">First Name:</label>
+                                            <input value="{{ order_form.first_name.value |default_if_none:""}}" placeholder="First Name" name="first_name" type="text" required class="input--style-1" >
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Last Name:</label>
+                                            <input value="{{ order_form.last_name.value |default_if_none:""}}" name="last_name" placeholder="Last Name" required type="text"  class="input--style-1" >
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="label">Email:</label>
+                                    <input name="email" value="{{ order_form.email.value |default_if_none:""}}" type="email" placeholder="Insert your Email" required class="input--style-1">
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Adults:</label>
+                                            <input onchange="get_price()" name="adult_count" type="number" required min="1" value="{{ order_form.adult_count.value |default_if_none:"0"}}" class="input--style-1" id="adult_count">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="">
+                                            <label class="label">Children:</label>
+                                            <input onchange="get_price()" name="children_count" required type="number" value="{{ order_form.children_count.value |default_if_none:"0"}}" class="input--style-1" id="child_count">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {% for message in messages %}
+                                <div>
+                                    <p style="color: red; text-align: center" class="input--style-1">{{ message }}</p>
+                                </div>
+                                {% endfor %}
+                                <button class="btn-submit" type="submit">Book</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/vendor/select2/select2.min.js"></script>
+    <script src="../static/vendor/datepicker/moment.min.js"></script>
+    <script src="../static/vendor/datepicker/daterangepicker.js"></script>
+    <script>
+    function get_price(){
+        var child= document.getElementById("child_count").value
+        var adult= document.getElementById("adult_count").value
+        document.getElementById("trip-price").innerHTML = {{ data.price_adult|safe }}*adult+{{ data.price_child|safe }}*child+"$";
+    };
+    window.onload = get_price()
+    </script>
+
+    <script src="../static/js/global.js"></script>
+{% endblock %}

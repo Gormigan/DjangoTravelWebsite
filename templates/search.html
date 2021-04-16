@@ -1,0 +1,73 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Results{% endblock %}
+{% block css %}
+
+<link href="../static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="../static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+<!-- Font special for pages-->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<!-- Vendor CSS-->
+<link href="../static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="../static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="../static/css/main.css" rel="stylesheet" media="all">
+{% endblock %}
+{% block bootstrap %}{% endblock %}
+{% block content %}
+
+    <div class="page-wrapper bg-img-1 p-t-165 p-b-100">
+        <div class="wrapper" style="width: 1200px">
+            <div class="card card-1">
+                <div class="card-body">
+                    <ul class="tab-list">
+                        <li class="tab-list__item active">
+                            <a class="tab-list__link" href="#tab1" data-toggle="tab">Search</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="tab1"></div>
+                        <div class="tab-pane" id="tab2">
+                        </div>
+                        <div class="tab-pane active" id="tab3">
+
+                        {% for data in query %}
+                        <div class="row row-space"style="margin-bottom: 20px">
+                                <div class="col-2">
+                                    <div class="">
+                                        <a href="{% url 'view' data.pk %}"><img width="80px" height="80px" style="border-radius: 5%;" src="{{ data.image.url }}"></a>
+
+                                    </div>
+                                </div>
+                                <div class="col-2" style="">
+                                    <a style="color: inherit;text-decoration: none !important;" href="{% url 'view' data.pk %}"><h3 class="input--style-1" >{{ data.name }}</h3></a>
+
+                                </div>
+                        </div>
+
+                        {% empty %}
+                            <h3 style="text-align: center"class="input--style-1">No Results Found</h3>
+                        {% endfor %}
+                                {% for message in messages %}
+                                <div>
+                                    <p style="color: red; text-align: center" class="input--style-1">{{ message }}</p>
+                                </div>
+                                {% endfor %}
+                                <button class="btn-submit" type="submit">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/vendor/select2/select2.min.js"></script>
+    <script src="../static/vendor/datepicker/moment.min.js"></script>
+    <script src="../static/vendor/datepicker/daterangepicker.js"></script>
+    <!-- Main JS-->
+    <script src="../static/js/global.js"></script>
+{% endblock %}
